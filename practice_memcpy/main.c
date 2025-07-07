@@ -1,21 +1,10 @@
-
+// esp32/my_memcpy/main/main.c
 #include "esp_timer.h"
 #include <stdio.h>
-#include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-
-
-void *my_memcpy(void *dest, const void *src, size_t n) {
-    unsigned char *d = (unsigned char *)dest;
-    const unsigned char *s = (const unsigned char *)src;
-
-    for (size_t i = 0; i < n; ++i) {
-        d[i] = s[i];
-    }
-
-    return dest;
-}
+#include "my_memcpy.h"  // 自定義的memcpy
+//void *可以回傳任何型別的記憶體位址
 
 void app_main(void)
 {
