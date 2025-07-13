@@ -12,6 +12,7 @@
 **實作檔案：**  
 c-esp32-firmware/practice_memcpy/my_memcpy.c
 
+--
 
 ### 2. UART 指令控制 LED（使用 UART 接收緩衝）
 **目標：**  
@@ -19,8 +20,10 @@ c-esp32-firmware/practice_memcpy/my_memcpy.c
 **內容：**  
 - 持續接收使用者輸入的字串（例如 LED ON / LED OFF） 
 - 當接收到換行符號（'\n' 或 '\r'）時觸發指令解析  
-- 根據字串內容控制 GPIO2（開關 LED） 
+- 根據字串內容控制 GPIO2（開關 LED）  
 **實作檔案：**
+
+--
 
 ### 3. FreeRTOS 任務排程（多任務 + 事件同步） 
 **目標：**  
@@ -35,11 +38,9 @@ c-esp32-firmware/practice_memcpy/my_memcpy.c
 | `uart_task`   | 每次狀態改變時，在 UART 上輸出目前 LED 閃爍頻率 |
 | `button_scan` | 偵測按鈕事件（GPIO0），每按一次切換一種閃爍模式，並通知 UART 任務 |
 
----
-
 **使用技術：**
-- FreeRTOS 多任務排程 (`xTaskCreate`)
-- 事件同步 (`xEventGroupSetBits`, `xEventGroupWaitBits`)
-- GPIO 控制與按鈕去彈跳
-- UART 資訊輸出
+- FreeRTOS 多任務排程 (`xTaskCreate`)  
+- 事件同步 (`xEventGroupSetBits`, `xEventGroupWaitBits`)  
+- GPIO 控制與按鈕去彈跳  
+- UART 資訊輸出  
 **實作檔案：**
