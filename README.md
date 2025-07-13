@@ -9,6 +9,8 @@
 熟悉標準 C 函式的行為與記憶體操作原理。  
 **內容：**  
 在 `components/` 資料夾中自建一個元件（例如 `my_memcpy`），自行實作 `memcpy` 。  
+**實作檔案：**  
+c-esp32-firmware/practice_memcpy/my_memcpy.c
 
 
 ### 2. UART 指令控制 LED（使用 UART 接收緩衝）
@@ -18,9 +20,9 @@
 - 持續接收使用者輸入的字串（例如 LED ON / LED OFF） 
 - 當接收到換行符號（'\n' 或 '\r'）時觸發指令解析  
 - 根據字串內容控制 GPIO2（開關 LED） 
+**實作檔案：**
 
-### 3. FreeRTOS 任務排程（多任務 + 事件同步）
-
+### 3. FreeRTOS 任務排程（多任務 + 事件同步） 
 **目標：**  
 練習 FreeRTOS 任務建立、事件同步，以及任務間狀態傳遞，整合硬體輸出與使用者輸入互動。
 
@@ -40,3 +42,4 @@
 - 事件同步 (`xEventGroupSetBits`, `xEventGroupWaitBits`)
 - GPIO 控制與按鈕去彈跳
 - UART 資訊輸出
+**實作檔案：**
