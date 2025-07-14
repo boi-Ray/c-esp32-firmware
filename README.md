@@ -44,3 +44,4 @@ c-esp32-firmware/practice_memcpy/my_memcpy.c
 - GPIO 控制與按鈕去彈跳  
 - UART 資訊輸出  
 **實作檔案：**
+  FreeRTOS_Exercises/main.c
