@@ -20,8 +20,10 @@ c-esp32-firmware/practice_memcpy/my_memcpy.c
 **內容：**  
 - 持續接收使用者輸入的字串（例如 LED ON / LED OFF） 
 - 當接收到換行符號（'\n' 或 '\r'）時觸發指令解析  
-- 根據字串內容控制 GPIO2（開關 LED）  
+- 根據字串內容控制 GPIO2（開關 LED）
+
 **實作檔案：**
+  UART-test/main.c
 
 ---
 
@@ -42,6 +44,7 @@ c-esp32-firmware/practice_memcpy/my_memcpy.c
 - FreeRTOS 多任務排程 (`xTaskCreate`)  
 - 事件同步 (`xEventGroupSetBits`, `xEventGroupWaitBits`)  
 - GPIO 控制與按鈕去彈跳  
-- UART 資訊輸出  
+- UART 資訊輸出
+
 **實作檔案：**
   FreeRTOS_Exercises/main.c
