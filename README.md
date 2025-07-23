@@ -96,6 +96,11 @@ c-esp32-firmware/practice_memcpy/my_memcpy.c
   ---  => O , 2  
   ...  => S , 3  
   SOS            //當鬆開後靜止 > 700 ms時組合成單字並輸出  
+**使用技術：**
+- ESP32 + ESP-IDF：使用官方框架開發，控制 GPIO 與軟體定時器。
+- FreeRTOS：透過 Task 與 Event Group 實現非同步事件驅動。
+- esp_timer：定時輪詢按鈕輸入，處理去彈跳與輸入時間判定。
+- 二元樹：將 Morse code 映射為一棵二元樹，實現高效字元解碼O(1)。
 
 ---
 
